@@ -13,12 +13,13 @@ import java.util.List;
 import Model.ListItem;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+
     private Context context;
     private List<ListItem>listItems;
 
-public MyAdapter(Context context, List listitem){
+public MyAdapter(Context context, List listItem){
     this.context = context;
-    this.listItems = listitem;
+    this.listItems = listItem;
 
 
 }
@@ -28,6 +29,8 @@ public MyAdapter(Context context, List listitem){
     View view = LayoutInflater.from(parent.getContext())
             .inflate(R.layout.list_row, parent, false);
         return new ViewHolder(view);
+
+
     }
 
     @Override
@@ -35,6 +38,7 @@ public MyAdapter(Context context, List listitem){
     ListItem item = listItems.get(position);
             holder.name.setText(item.getName());
             holder.description.setText(item.getDescription());
+
     }
 
     @Override
