@@ -1,7 +1,9 @@
 package Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.nfc.Tag;
+import android.service.autofill.OnClickAction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,8 @@ import android.widget.TextView;
 //import androidx.annotation.NonNull;
 //import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.booklist.DetailsActivity;
 import com.example.booklist.R;
 import java.util.List;
 import Model.ListItem;
@@ -19,7 +23,7 @@ import Model.ListItem;
 
     public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
-         public Context context;
+         private Context context;
          private List<ListItem>listItems;
          public static final String TAG = "Recycler Adapter";
          int count = 0;
@@ -65,7 +69,7 @@ import Model.ListItem;
 
  // ------ ViewHolder Class --------
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public TextView name;
         public TextView description;
         public ImageView image;
@@ -73,6 +77,7 @@ import Model.ListItem;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
 
             name = itemView.findViewById(R.id.title);
             description = itemView.findViewById(R.id.description);
@@ -81,7 +86,19 @@ import Model.ListItem;
 
         }
 
+        @Override
+        public void onClick(View v) {
+            int position = getAdapterPosition();
+            ListItem item = listItems.get(position);
+            Intent intent = new Intent(context, DetailsActivity.class);
+            intent.putExtra("image", item.getImage());
+            intent.putExtra("name", item.getName());
+            intent.putExtra("description", item.getDescription());
 
+            context.startActivity(intent);
 
+        }
     }
+
+
 }
