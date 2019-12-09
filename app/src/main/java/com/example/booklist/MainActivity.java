@@ -34,19 +34,19 @@ public class MainActivity extends AppCompatActivity {
 
         listItems = new ArrayList<>();
 
-        listItems.add(new ListItem(R.drawable.richpoor,"Rich Dad Poor Dad","Author: Robert"));
-        listItems.add(new ListItem(R.drawable.paulo,"The Alchemist","Author: Paulo"));
-        listItems.add(new ListItem(R.drawable.mh,"Milk & Honey","Author: Rupi"));
-        listItems.add(new ListItem(R.drawable.hwc,"W W C W Y D","Author: Robin Sharma"));
-        listItems.add(new ListItem(R.drawable.eleven,"Eleven Minutes","Author: Paulo"));
-        listItems.add(new ListItem(R.drawable.richpoor,"Rich Dad Poor Dad","Author: Robert"));
-        listItems.add(new ListItem(R.drawable.paulo,"The Alchemist","Author: Paulo"));
-        listItems.add(new ListItem(R.drawable.mh,"Milk & Honey","Author: Rupi"));
-        listItems.add(new ListItem(R.drawable.hwc,"W W C W Y D","Author: Robin Sharma"));
-        listItems.add(new ListItem(R.drawable.eleven,"Eleven Minutes","Author: Paulo"));
-        listItems.add(new ListItem(R.drawable.paulo,"The Alchemist","Author: Paulo"));
-        listItems.add(new ListItem(R.drawable.mh,"Milk & Honey","Author: Rupi"));
-        listItems.add(new ListItem(R.drawable.hwc,"W W C W Y D","Author: Robin Sharma"));
+        listItems.add(new ListItem(R.drawable.richpoor,"Rich Dad Poor Dad","Author is Robert Kiyosaki"));
+        listItems.add(new ListItem(R.drawable.paulo,"The Alchemist","Author is Paulo Coelho"));
+        listItems.add(new ListItem(R.drawable.mh,"Milk & Honey","Author is Rupi Kaur"));
+        listItems.add(new ListItem(R.drawable.hwc,"W W C W Y D","Author is Robin Sharma"));
+        listItems.add(new ListItem(R.drawable.eleven,"Eleven Minutes","Author is Paulo Coelho"));
+        listItems.add(new ListItem(R.drawable.richpoor,"Rich Dad Poor Dad","Author is Robert Kiyosaki"));
+        listItems.add(new ListItem(R.drawable.paulo,"The Alchemist","Author is Paulo Coelho"));
+        listItems.add(new ListItem(R.drawable.mh,"Milk & Honey","Author is Rupi Kaur"));
+        listItems.add(new ListItem(R.drawable.hwc,"W W C W Y D","Author is Robin Sharma"));
+        listItems.add(new ListItem(R.drawable.eleven,"Eleven Minutes","Author is Paulo Coelho"));
+        listItems.add(new ListItem(R.drawable.paulo,"The Alchemist","Author is Paulo Coelho"));
+        listItems.add(new ListItem(R.drawable.mh,"Milk & Honey","Author is Rupi Kaur"));
+        listItems.add(new ListItem(R.drawable.hwc,"W W C W Y D","Author is Robin Sharma"));
 
 //
 //        for (int i = 0; i  < 20; i++){
