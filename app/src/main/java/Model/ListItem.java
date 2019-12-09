@@ -3,14 +3,27 @@ package Model;
 public class ListItem {
 
     private String name;
+    private int image;
+    private String description;
 
-    public ListItem(String name, String description) {
+    public ListItem(int image, String name, String description) {
         this.name = name;
         this.description = description;
+        this.image = image;
 
     }
 
-    private String description;
+
+
+    public int getImage() {
+        return image;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
+
 
 
     // ---- getter & setter for name ----

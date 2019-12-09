@@ -16,7 +16,7 @@ import Model.ListItem;
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
-    private List<ListItem> listItems;
+     List<ListItem> listItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +29,23 @@ public class MainActivity extends AppCompatActivity {
 
         listItems = new ArrayList<>();
 
-        for (int i = 0; i  < 20; i++){
-            ListItem item =  new ListItem("Book " + (i+1), "Author of book " + (i + 1));
-            listItems.add(item);
+        listItems.add(new ListItem(R.drawable.richpoor,"Rich Dad Poor Dad","Author: Robert"));
+        listItems.add(new ListItem(R.drawable.paulo,"The Alchemist","Author: Paulo"));
+        listItems.add(new ListItem(R.drawable.mh,"Milk & Honey","Author: Rupi"));
+        listItems.add(new ListItem(R.drawable.hwc,"W W C W Y D","Author: Robin Sharma"));
+        listItems.add(new ListItem(R.drawable.eleven,"Eleven Minutes","Author: Paulo"));
+        listItems.add(new ListItem(R.drawable.richpoor,"Rich Dad Poor Dad","Author: Robert"));
+        listItems.add(new ListItem(R.drawable.paulo,"The Alchemist","Author: Paulo"));
+        listItems.add(new ListItem(R.drawable.mh,"Milk & Honey","Author: Rupi"));
+        listItems.add(new ListItem(R.drawable.hwc,"W W C W Y D","Author: Robin Sharma"));
+        listItems.add(new ListItem(R.drawable.eleven,"Eleven Minutes","Author: Paulo"));
 
-       }
+//
+//        for (int i = 0; i  < 20; i++){
+//            ListItem item =  new ListItem("Book " + (i+1), "Author of book " + (i + 1));
+//            listItems.add(item);
+//
+//       }
 
         adapter = new MyAdapter(this, listItems);
         recyclerView.setAdapter(adapter);

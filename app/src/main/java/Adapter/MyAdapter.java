@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 //import androidx.annotation.NonNull;
 //import androidx.annotation.NonNull;
@@ -37,9 +38,19 @@ public MyAdapter(Context context, List listItem){
 
     @Override
     public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
-    ListItem item = listItems.get(position);
-            holder.name.setText(item.getName());
-            holder.description.setText(item.getDescription());
+   ListItem item = listItems.get(position);
+           // holder.name.setText(item.getName());
+           // holder.description.setText(item.getDescription());
+
+
+        ImageView image = holder.image;
+        TextView name = holder.name;
+        TextView description = holder.description;
+
+        image.setImageResource(item.getImage());
+        name.setText(item.getName());
+        description.setText(item.getDescription());
+
 
 
     }
@@ -54,6 +65,7 @@ public MyAdapter(Context context, List listItem){
     public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView name;
         public TextView description;
+        public ImageView image;
 
 
 
@@ -62,6 +74,7 @@ public MyAdapter(Context context, List listItem){
 
             name = itemView.findViewById(R.id.title);
             description = itemView.findViewById(R.id.description);
+            image = itemView.findViewById(R.id.image);
 
 
 
