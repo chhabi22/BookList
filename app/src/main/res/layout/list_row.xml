@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
+    android:orientation="vertical"
         android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/cardview_compat_inset_shadow"
-        app:cardCornerRadius="4dp">
+        app:cardCornerRadius="2dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="#7e9594">
 
 
         <RelativeLayout
             android:id="@+id/booklist"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_margin="4dp"
             >
-
+            
             <ImageView
-                android:id="@+id/deleteImage"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="2dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:src="@drawable/ic_delete" />
+                android:id="@+id/image"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:src="@drawable/richpoor"
+                />
 
             <TextView
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Title"
-                android:textSize="20sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 android:layout_alignParentTop="true"
-
-                />
+                android:layout_toEndOf="@id/image"
+                android:layout_toRightOf="@id/image" />
 
             <TextView
                 android:id="@+id/description"
@@ -45,7 +45,9 @@
                 android:layout_below="@id/title"
                 android:text="description"
                 android:textStyle="italic"
-                android:textSize="15sp"
+                android:textSize="20sp"
+                android:layout_toEndOf="@id/image"
+                android:layout_toRightOf="@id/image"
                 />
 
         </RelativeLayout>

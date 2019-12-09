@@ -15,7 +15,7 @@ import Model.ListItem;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     private Context context;
-    private List<ListItem>listItems;
+private List<ListItem>listItems;
 
 public MyAdapter(Context context, List listItem){
     this.context = context;
@@ -26,8 +26,10 @@ public MyAdapter(Context context, List listItem){
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    // to inflate our row ----------
     View view = LayoutInflater.from(parent.getContext())
             .inflate(R.layout.list_row, parent, false);
+    // to return view holder class ----
         return new ViewHolder(view);
 
 
@@ -39,6 +41,7 @@ public MyAdapter(Context context, List listItem){
             holder.name.setText(item.getName());
             holder.description.setText(item.getDescription());
 
+
     }
 
     @Override
@@ -46,15 +49,26 @@ public MyAdapter(Context context, List listItem){
         return listItems.size();
     }
 
+
+
     public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView name;
         public TextView description;
 
+
+
         public ViewHolder(View itemView) {
             super(itemView);
 
-            name = (TextView) itemView.findViewById(R.id.title);
-            description = (TextView) itemView.findViewById(R.id.description);
+            name = itemView.findViewById(R.id.title);
+            description = itemView.findViewById(R.id.description);
+
+
+
+
         }
+
+
+
     }
 }

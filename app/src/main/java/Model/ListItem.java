@@ -3,17 +3,18 @@ package Model;
 public class ListItem {
 
     private String name;
-    private String description;
 
-    // ---- consturctor ----
     public ListItem(String name, String description) {
         this.name = name;
         this.description = description;
 
     }
 
+    private String description;
 
-    // -------- Getter & Setter for 'name' ----------
+
+    // ---- getter & setter for name ----
+
     public String getName() {
         return name;
     }
@@ -22,7 +23,7 @@ public class ListItem {
         this.name = name;
     }
 
-    // -------- Getter & Setter for 'description' ----------
+    // ---- getter & setter for description ----
     public String getDescription() {
         return description;
     }
@@ -30,9 +31,6 @@ public class ListItem {
     public void setDescription(String description) {
         this.description = description;
     }
-
-
-
 
 
 
