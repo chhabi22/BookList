@@ -13,7 +13,6 @@ import android.widget.TextView;
 //import androidx.annotation.NonNull;
 //import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.booklist.DetailsActivity;
 import com.example.booklist.R;
 import java.util.List;
@@ -32,20 +31,20 @@ import Model.ListItem;
         this.context = context;
         this.listItems = listItem; }
 
-
+                  // To hold views on creation
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         Log.i(TAG, "onCreateViewHolder - " + count++);
 
-    // to inflate our row ----------
+    // to inflate the row ----------
     View view = LayoutInflater.from(parent.getContext())
             .inflate(R.layout.list_row, parent, false);
-    // to return view holder class ----
+
         return new ViewHolder(view);
 
     }
-
+                  // To Bind Views
     @Override
     public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
 
@@ -61,6 +60,7 @@ import Model.ListItem;
         description.setText(item.getDescription());
 
     }
+                   // To count Items to show as views
 
     @Override
     public int getItemCount() {
@@ -83,8 +83,9 @@ import Model.ListItem;
             description = itemView.findViewById(R.id.description);
             image = itemView.findViewById(R.id.image);
 
-
         }
+  // ---- End of ViewHolder Class ------
+
 
         @Override
         public void onClick(View v) {
