@@ -1,59 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    android:orientation="horizontal"
         android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/cardview_compat_inset_shadow"
         app:cardCornerRadius="3dp"
-    app:cardElevation="3dp"
-    app:cardUseCompatPadding="true"
-    app:cardBackgroundColor="#7e9594">
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="#7e9594">
 
 
-        <RelativeLayout
-            android:id="@+id/booklist"
+    <RelativeLayout
+        android:id="@+id/booklist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:contentDescription="book" />
+
+        <TextView
+            android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_margin="4dp"
-            >
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/image"
+            android:layout_toRightOf="@id/image"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"/>
 
-            <ImageView
-                android:id="@+id/image"
-                android:layout_width="128dp"
-                android:layout_height="128dp"
-                android:contentDescription="book" />
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="20dp"
+            android:text="description"
+            android:layout_marginLeft="15dp"
+            android:textStyle="italic"
+            android:textSize="20sp"
+            android:layout_toEndOf="@id/image"
+            android:layout_toRightOf="@id/image"
+            />
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Title"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:layout_alignParentTop="true"
-                android:layout_toEndOf="@id/image"
-                android:layout_toRightOf="@id/image"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25dp"/>
-
-            <TextView
-                android:id="@+id/description"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/title"
-                android:layout_marginTop="20dp"
-                android:text="description"
-                android:layout_marginLeft="15dp"
-                android:textStyle="italic"
-                android:textSize="20sp"
-                android:layout_toEndOf="@id/image"
-                android:layout_toRightOf="@id/image"
-                />
-
-        </RelativeLayout>
+    </RelativeLayout>
 
 
         </androidx.cardview.widget.CardView>

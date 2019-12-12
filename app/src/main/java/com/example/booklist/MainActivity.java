@@ -1,7 +1,6 @@
 package com.example.booklist;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
@@ -15,7 +14,7 @@ import Model.ListItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    //----- instance of recyclerView-----
+    
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
      List<ListItem> listItems;
@@ -31,7 +30,23 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
 
         //---- layout manager ----
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+       recyclerView.setLayoutManager(layoutManager);
+
+
+
+
+
+//        for (int i = 0; i  < 20; i++){
+//            ListItem item =  new ListItem("Book " + (i+1), "Author of book " + (i + 1));
+//            listItems.add(item);
+//
+//       }
+
+
+
+
+
 
         listItems = new ArrayList<>();
 
@@ -51,14 +66,6 @@ public class MainActivity extends AppCompatActivity {
         listItems.add(new ListItem(R.drawable.eleven,"Eleven Minutes","Author is Paulo Coelho"));
         listItems.add(new ListItem(R.drawable.richpoor,"Rich Dad Poor Dad","Author is Robert Kiyosaki"));
         listItems.add(new ListItem(R.drawable.paulo,"The Alchemist","Author is Paulo Coelho"));
-
-
-
-//        for (int i = 0; i  < 20; i++){
-//            ListItem item =  new ListItem("Book " + (i+1), "Author of book " + (i + 1));
-//            listItems.add(item);
-//
-//       }
 
 
         adapter = new MyAdapter(this, listItems);

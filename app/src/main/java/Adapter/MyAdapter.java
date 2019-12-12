@@ -31,7 +31,7 @@ import Model.ListItem;
         this.context = context;
         this.listItems = listItem; }
 
-                  // To hold views on creation
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
@@ -44,7 +44,7 @@ import Model.ListItem;
         return new ViewHolder(view);
 
     }
-                  // To Bind Views
+
     @Override
     public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
 
@@ -60,7 +60,7 @@ import Model.ListItem;
         description.setText(item.getDescription());
 
     }
-                   // To count Items to show as views
+
 
     @Override
     public int getItemCount() {
@@ -84,7 +84,7 @@ import Model.ListItem;
             image = itemView.findViewById(R.id.image);
 
         }
-  // ---- End of ViewHolder Class ------
+
 
 
         @Override
