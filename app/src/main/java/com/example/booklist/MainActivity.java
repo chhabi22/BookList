@@ -1,6 +1,7 @@
 package com.example.booklist;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
@@ -14,7 +15,7 @@ import Model.ListItem;
 
 public class MainActivity extends AppCompatActivity {
 
-    
+
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
      List<ListItem> listItems;
@@ -27,11 +28,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         recyclerView = findViewById(R.id.recyclerViewID);
-        recyclerView.setHasFixedSize(true);
+
 
         //---- layout manager ----
+
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-       recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setLayoutManager(layoutManager);
+
+
+
 
 
 
@@ -65,6 +70,13 @@ public class MainActivity extends AppCompatActivity {
         listItems.add(new ListItem(R.drawable.hwc,"W W C W Y D","Author is Robin Sharma"));
         listItems.add(new ListItem(R.drawable.eleven,"Eleven Minutes","Author is Paulo Coelho"));
         listItems.add(new ListItem(R.drawable.richpoor,"Rich Dad Poor Dad","Author is Robert Kiyosaki"));
+        listItems.add(new ListItem(R.drawable.paulo,"The Alchemist","Author is Paulo Coelho"));
+        listItems.add(new ListItem(R.drawable.eleven,"Eleven Minutes","Author is Paulo Coelho"));
+        listItems.add(new ListItem(R.drawable.richpoor,"Rich Dad Poor Dad","Author is Robert Kiyosaki"));
+        listItems.add(new ListItem(R.drawable.paulo,"The Alchemist","Author is Paulo Coelho"));
+        listItems.add(new ListItem(R.drawable.mh,"Milk & Honey","Author is Rupi Kaur"));
+        listItems.add(new ListItem(R.drawable.hwc,"W W C W Y D","Author is Robin Sharma"));
+        listItems.add(new ListItem(R.drawable.eleven,"Eleven Minutes","Author is Paulo Coelho"));
         listItems.add(new ListItem(R.drawable.paulo,"The Alchemist","Author is Paulo Coelho"));
 
 

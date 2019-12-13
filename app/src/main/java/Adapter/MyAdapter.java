@@ -48,6 +48,9 @@ import Model.ListItem;
     @Override
     public void onBindViewHolder(MyAdapter.ViewHolder holder, int position) {
 
+        // - get element from  dataset at this position
+        // - replace the contents of the view with that element
+
         ListItem item = listItems.get(position);
 
 
@@ -66,6 +69,9 @@ import Model.ListItem;
     public int getItemCount() {
         return listItems.size();
     }
+
+
+
 
  // ------ ViewHolder Class --------
 

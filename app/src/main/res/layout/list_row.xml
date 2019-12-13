@@ -6,10 +6,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/cardview_compat_inset_shadow"
-        app:cardCornerRadius="3dp"
-        app:cardElevation="3dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
         app:cardUseCompatPadding="true"
-        app:cardBackgroundColor="#7e9594">
+        >
 
 
     <RelativeLayout
